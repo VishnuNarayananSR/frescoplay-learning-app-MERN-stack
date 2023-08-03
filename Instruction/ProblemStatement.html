@@ -1,0 +1,497 @@
+<style type="text/css">body{
+	    margin-left:5%;
+      margin-right:5%;
+	  }
+	  header{
+	    background:#3C0E29;
+	    color:#E1E0D2;
+	    padding: 2px 2px 2px 12px;
+	    border-radius: 10px;
+	  }
+	  pre{
+	    background:#D0CCD2;
+	    padding: 3px;
+	    outline: 2px solid #724b62;
+  	  outline-offset: 10px;
+	  }
+	  hr{
+  	  background-color:#724b62;
+  	  height: 2px;
+  	  margin-bottom: 1em;
+	  }
+    img{
+      padding: 19px;
+    }
+    li{
+      padding: 5px;
+    }
+    u{
+      font-size: 20px;
+      color:#2E67BF;
+    }
+    span{
+      color:#2E67BF;
+      font-weight: 600;
+    }
+	  .header{
+	    margin: 0% auto 0 auto;
+	    display: grid;
+	    background:#046286;
+	    padding: 3%;
+	    color: white;
+	    margin:"fit-content";
+	    grid-template-areas: "title video";
+	    overflow: scroll;
+	  }
+ 	  .item1 {
+      grid-area: title;
+	    font-size: 23px;
+	    text-align: center;
+	    padding:10px	
+  	  }
+  	.item2 img{
+      width: 650px;
+      height: 300px;	
+  	}
+  	.item1 span{
+	    font-size:35px;
+	    color: white;
+	  }
+	  .note{
+	    color:red;
+	  }
+    strong{
+      color: #4d2ebf;
+    }
+	  table {
+      border-collapse: collapse;
+      border: 2px solid black;
+      background: #e9e9e9;
+      text-align: center
+    }	
+    .title {
+	    color: #2E67BF;
+	    font-weight: 600;
+	    font-size: 32px;
+    }
+</style>
+<title></title>
+<div class="header">
+<p class="item1"><span>ReactJS-NodeJS Learning App</span><br />
+<br />
+This application is expected to be developed using ReactJS and NodeJS. Kindly find the problem statement and GIF image on this page.</p>
+
+<div class="item2"><img alt="invoice" src="./assets/learning-app.gif" /></div>
+</div>
+
+<h2 class="note">Note:</h2>
+
+<hr />
+<p><img alt="" src="assets/RefreshImg.png" /></p>
+
+<ul>
+	<li>Kindly use <strong>fetch API</strong> for integration.</li>
+</ul>
+
+<h2 class="title">FRONT-END ReactJS</h2>
+
+<hr />
+<ul>
+	<li>This application uses ReactJS as the front-end. Fix the test case errors in the application. The test cases are written in <strong>Jest</strong>.</li>
+</ul>
+
+<h3>App Component</h3>
+
+<ul>
+	<li>Write a function to get the course details from the backend using the <strong>handleGetData</strong> function.</li>
+	<li>Display the details in the card to view the details.</li>
+	<li>Write a function to apply for a course using the <strong>handleApp</strong> function.</li>
+	<li>Write a function to apply rating a course. The rating can be added only if we have applied for the course.</li>
+	<li>Use <strong>isRated</strong> property to disable the add rating option.</li>
+	<li>Use <strong>handleRating</strong> to set the rate value in the state.</li>
+	<li>Use <strong>handleAddRating</strong> to add rating on clicking Add button.</li>
+	<li>Write a function to drop for a course using the <strong>handleDrop</strong> function.</li>
+</ul>
+
+<h2 class="title">BACK-END: NodeJS</h2>
+
+<hr />
+<ul>
+	<li>You will be making use of <strong>Node.js </strong>and <strong>MongoDB </strong>for back-end purposes.</li>
+	<li><strong>learning-app-easy</strong> is the name of the database used in the application.</li>
+	<li>There is a single collection called <strong>courses </strong>inside the database learning-app-easy.
+	<p>&nbsp;</p>
+	</li>
+</ul>
+
+<h3>COLLECTIONS:</h3>
+
+<p>There are is a single file for collection namely courses.js that reside inside Nodejs/src/mongoose/models. The schema for those collections are as follows.</p>
+
+<table border="1" data-tablelook="1696" data-tablestyle="MsoTableGrid">
+	<tbody>
+		<tr>
+			<td colspan="5" data-celllook="0">
+			<p><b>Courses</b></p>
+			</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">
+			<p><b>Sl. No. </b></p>
+			</td>
+			<td data-celllook="0">
+			<p><b>Field name </b></p>
+			</td>
+			<td data-celllook="0">
+			<p><b>Type </b></p>
+			</td>
+			<td data-celllook="0">
+			<p><b>Validations </b></p>
+			</td>
+			<td data-celllook="0">
+			<p><b>Required </b></p>
+			</td>
+			<td data-celllook="0">
+			<p><b>Default</b></p>
+			</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">
+			<p>1</p>
+			</td>
+			<td data-celllook="0">
+			<p>_id</p>
+			</td>
+			<td data-celllook="0">
+			<p>ObjectID</p>
+			</td>
+			<td data-celllook="0">
+			<p>Auto-generated</p>
+			</td>
+			<td data-celllook="0">
+			<p>-</p>
+			</td>
+			<td data-celllook="0">
+			<p>-</p>
+			</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">
+			<p>2</p>
+			</td>
+			<td data-celllook="0">
+			<p>courseName</p>
+			</td>
+			<td data-celllook="0">
+			<p>String</p>
+			</td>
+			<td data-celllook="0">
+			<p>Should not contain any special characters except dots or spaces and length should not be lesser than 3</p>
+			</td>
+			<td data-celllook="0">
+			<p>TRUE</p>
+			</td>
+			<td data-celllook="0">
+			<p>-</p>
+			</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">
+			<p>3</p>
+			</td>
+			<td data-celllook="0">
+			<p>courseDept</p>
+			</td>
+			<td data-celllook="0">Number</td>
+			<td data-celllook="0">
+			<p>Can only have any one of the following values(WD, AI, DS, CS, CC, UI, GD)</p>
+			</td>
+			<td data-celllook="0">
+			<p>TRUE</p>
+			</td>
+			<td data-celllook="0">
+			<p>-</p>
+			</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">
+			<p>4</p>
+			</td>
+			<td data-celllook="0">
+			<p>description</p>
+			</td>
+			<td data-celllook="0">String</td>
+			<td data-celllook="0">
+			<p>Should have at least three words</p>
+			</td>
+			<td data-celllook="0">
+			<p>TRUE</p>
+			</td>
+			<td data-celllook="0">
+			<p>-</p>
+			</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">5</td>
+			<td data-celllook="0">duration</td>
+			<td data-celllook="0">Number</td>
+			<td data-celllook="0">Minimum = 1, Maximum = 100</td>
+			<td data-celllook="0">TRUE</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">6</td>
+			<td data-celllook="0">isApplied</td>
+			<td data-celllook="0">Boolean</td>
+			<td data-celllook="0">-</td>
+			<td data-celllook="0">False</td>
+			<td>False</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">7</td>
+			<td data-celllook="0">isRated</td>
+			<td data-celllook="0">Boolean</td>
+			<td data-celllook="0">-</td>
+			<td data-celllook="0">False</td>
+			<td>False</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">8</td>
+			<td data-celllook="0">noOfRatings</td>
+			<td data-celllook="0">Number</td>
+			<td data-celllook="0">-</td>
+			<td data-celllook="0">False</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">9</td>
+			<td data-celllook="0">rating</td>
+			<td data-celllook="0">Number</td>
+			<td data-celllook="0">-</td>
+			<td data-celllook="0">False</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td data-celllook="0">
+			<p>10</p>
+			</td>
+			<td data-celllook="0">
+			<p>__v</p>
+			</td>
+			<td data-celllook="0">
+			<p>Number</p>
+			</td>
+			<td data-celllook="0">
+			<p>Auto-generated</p>
+			</td>
+			<td data-celllook="0">
+			<p>-</p>
+			</td>
+			<td>0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>ROUTERS:</h2>
+
+<p>There is a single file namely users.js that contains all the endpoints of the app and resides inside <strong>Nodejs/src/routers</strong>. The endpoints and their functionalities are as follows.</p>
+
+<p>1)<strong>/courses/enroll/:id</strong> -&gt; POST Method -&gt; This route should enrol the user to the course in the courses collection that has _id equal to id that comes with the request by making the isApplied status of the course as true.</p>
+
+<pre>
+        <code>
+            {
+              "message": "You have successfully enrolled for the course"
+            }
+        </code>
+      </pre>
+
+<pre>
+        <code>
+            {
+              "error": "You have already applied for this course"
+            }
+        </code>
+      </pre>
+
+<ul>
+	<li>If the user is enrolled in the course successfully, then you should send a response code of 200 with the following response message.</li>
+	<li>If the user had already enrolled in the course (i.e.) isApplied status of the course is already true, then you should send a response code of 403 with the following response message.</li>
+</ul>
+
+<p><strong>1)&nbsp;<em>/courses/enroll/:id&nbsp;</em>-&gt; POST Method -&gt;&nbsp;</strong>This route should enrol the user to the course in the courses collection that has _id equal to id that comes with the request by making the isApplied status of the course as true.&nbsp;</p>
+
+<ul>
+	<li>If the user is enrolled in the course successfully, then you should send a response code of <strong>200 </strong>with the following response message.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "message": "You have successfully enrolled for the course"
+  }</code></pre>
+
+<ul>
+	<li>If the user had already enrolled in&nbsp;the course (i.e.) isApplied status of the course is already true, then you should send a response code of&nbsp;<strong>403&nbsp;</strong>with the following response message.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "error": "You have already applied for this course"
+  }</code></pre>
+
+<ul>
+	<li>If something goes wrong in executing the request, then you should send a status code of&nbsp;<strong>400</strong>.</li>
+</ul>
+
+<p><strong>2)&nbsp;<em>/courses/drop/:id&nbsp;</em>-&gt; DELETE Method -&gt;&nbsp;</strong>This route should drop the user from the course in the courses collection that has _id equal to id that comes with the request by making the isApplied status of the course false.&nbsp;</p>
+
+<ul>
+	<li>If the user is dropped from&nbsp;the course successfully, then you should send a response code of <strong>200 </strong>with the following response message.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "message": "You have dropped the course"
+  }</code></pre>
+
+<ul>
+	<li>If the user hasn&#39;t enrolled on the course (i.e.)&nbsp;isApplied status of the course is already false, then you should send a response code of&nbsp;<strong>403&nbsp;</strong>with the following response message.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "error": "You have not enrolled for this course"
+  }</code></pre>
+
+<ul>
+	<li>If something goes wrong in executing the request, then you should send a status code of&nbsp;<strong>400</strong>.</li>
+</ul>
+
+<p><strong>3)&nbsp;<em>/courses/get&nbsp;</em>-&gt; GET Method -&gt;&nbsp;</strong>This route&nbsp;should fetch all the data from the&nbsp;<strong>courses&nbsp;</strong>collection as the response.</p>
+
+<ul>
+	<li>If the data is fetched successfully, then, you should send a response code of <strong>200</strong>.</li>
+	<li>If the data fetching was unsuccessful, then, you should send a response code of&nbsp;<strong>400</strong>.</li>
+</ul>
+
+<p><strong>4)&nbsp;<em>/courses/rating/:id&nbsp;</em>-&gt; PATCH Method -&gt;&nbsp;</strong>This route should update the rating and noOfRatings&nbsp;of the course in the <strong>courses&nbsp;</strong>collection that has _id the same as the id&nbsp;which comes with the request URL as follows.</p>
+
+<ul>
+	<li>Increment the <strong>noOfRatings</strong>&nbsp;by 1</li>
+	<li>Update the previous rating based on the rating that comes with the request body and the <strong>noOfRatings&nbsp;</strong>.</li>
+	<li>Make sure the rating is rounded off to one decimal place.</li>
+	<li>Then update the <strong>isRated</strong> property of the course to be true.</li>
+</ul>
+
+<p>Steps to update the rating:</p>
+
+<ul>
+	<li>The previous rating should be multiplied with the previous number noOfRatings.</li>
+	<li>The rating that comes with the body should be added to that value.</li>
+	<li>The obtained value should be divided with previous noOfRatings + 1.</li>
+</ul>
+
+<p><strong>Sample request:&nbsp;</strong>/courses/rating/5ff4264d9a608c280d745c3c</p>
+
+<p><strong>Data sent with the request body</strong>:</p>
+
+<pre>
+  <code class="language-json">{
+    "rating": 4
+  }</code></pre>
+
+<p>This route should have to update the rating and noOfRatings of the course with _id&nbsp;5ff4264d9a608c280d745c3c.</p>
+
+<p><strong>Sample updated values:</strong></p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<th colspan="1" rowspan="2" style="text-align: center; vertical-align: middle;"><strong>Sl.No.</strong></th>
+			<th colspan="1" rowspan="2" style="text-align: center; vertical-align: middle;"><strong>Rating sent with the request</strong></th>
+			<th colspan="3" rowspan="1"><strong>Values before sending the request</strong></th>
+			<th colspan="3" rowspan="1"><strong>Values after sending the request</strong></th>
+		</tr>
+		<tr>
+			<th><strong>Rating</strong></th>
+			<th><strong>noOfRatings</strong></th>
+			<th><strong>isRated</strong></th>
+			<th><strong>Rating</strong></th>
+			<th><strong>noOfRatings</strong></th>
+			<th><strong>isRated</strong></th>
+		</tr>
+		<tr>
+			<th>1</th>
+			<th>2</th>
+			<th>4.5</th>
+			<th>4</th>
+			<th>false</th>
+			<th>4</th>
+			<th>5</th>
+			<th>true</th>
+		</tr>
+		<tr>
+			<th>2</th>
+			<th>5</th>
+			<th>3.8</th>
+			<th>8</th>
+			<th>false</th>
+			<th>3.9</th>
+			<th>9</th>
+			<th>true</th>
+		</tr>
+		<tr>
+			<th>3</th>
+			<th>3</th>
+			<th>4.2</th>
+			<th>10</th>
+			<th>false</th>
+			<th>4.1</th>
+			<th>11</th>
+			<th>true</th>
+		</tr>
+	</tbody>
+</table>
+
+<ul>
+	<li>If the rating was updated successfully, then, you should send a response code of&nbsp;<strong>200&nbsp;</strong>with the following response message.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "message": "You have rated this course"
+  }</code></pre>
+
+<ul>
+	<li>If the user had already rated the course (i.e.), if the isRated property of the course is already true, then, you should send a response code of&nbsp;<strong>403&nbsp;</strong>with the following response.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "error": "You have already rated this course"
+  }</code></pre>
+
+<ul>
+	<li>If the user is not applied for the course and trying to rate the course (i.e.) if the isApplied property of the course is false, then, you should send a response code of&nbsp;<strong>403</strong>&nbsp;with the following message.</li>
+</ul>
+
+<pre>
+  <code class="language-json">{ 
+    "error": "You have not enrolled for this course"
+  }</code></pre>
+
+<ul>
+	<li>If something goes wrong in executing the request, then, you should send a response code of&nbsp;<strong>400</strong>.</li>
+</ul>
+<!--Database-->
+
+<h2 class="title">MongoDB Commands:</h2>
+
+<ul>
+	<li>You can open the mongo shell by running <strong>mongo</strong> from the terminal.</li>
+	<li>You can view all the data from the database in MongoDB by running <strong>show dbs</strong> from the mongo shell.</li>
+	<li>You can select the database by running <strong>use learning-app-easy.</strong></li>
+	<li>You can view the names of the collections by running <strong>show collections</strong>.</li>
+	<li>You can view the data inside a collection by running <strong>db.collection_name.find() </strong></li>
+	<li>Press <strong>ctrl+c</strong> to exit.</li>
+</ul>

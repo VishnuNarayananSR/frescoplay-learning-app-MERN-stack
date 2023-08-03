@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite id="0" name="/run/media/vnsr/E/CodingPlayground/React Projects/Kickoffs-learningapp/NodeJS/test/users.test.js" errors="0" package="/run/media/vnsr/E/CodingPlayground/React Projects/Kickoffs-learningapp/NodeJS/test/users.test.js" hostname="localhost" tests="8" failures="0" time="1.531" timestamp="2023-08-03T03:30:32">
+    <properties>
+    </properties>
+    <testcase classname="Viewing all the courses" name="Viewing all the courses" time="0">
+    </testcase>
+    <testcase classname="Enrolling a course" name="Enrolling a course" time="0">
+    </testcase>
+    <testcase classname="Enrolling an already enrolled course" name="Enrolling an already enrolled course" time="0">
+    </testcase>
+    <testcase classname="Dropping a course" name="Dropping a course" time="0">
+    </testcase>
+    <testcase classname="Dropping an unenrolled course" name="Dropping an unenrolled course" time="0">
+    </testcase>
+    <testcase classname="Rating a course" name="Rating a course" time="0">
+    </testcase>
+    <testcase classname="Rating an already rated course" name="Rating an already rated course" time="0">
+    </testcase>
+    <testcase classname="Giving rating to an unenrolled course" name="Giving rating to an unenrolled course" time="0">
+    </testcase>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+</testsuites>
